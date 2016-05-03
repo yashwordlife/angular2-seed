@@ -9,4 +9,14 @@ import {WrapperCmp} from '../header/header';
   directives: [WrapperCmp, CORE_DIRECTIVES]
 })
 export class TablePage {
+public tableHeaders : Array<any>;
+constructor() {
+	this.tableHeaders = [{
+		label : 'Dindu'
+	},{
+		label : 'Yash'
+	},{
+		label : 'Dingi'
+	}];
+}
 }

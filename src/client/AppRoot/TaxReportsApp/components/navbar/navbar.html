@@ -1,0 +1,107 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+  <div class="navbar-header">
+
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">LERETA </a>
+  </div>
+  <!-- /.navbar-header -->
+
+  <div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+      <accordion [closeOthers]="true" class="nav in" >
+  <li>
+    <a [routerLink]="['Dashboard']"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+  </li>
+  <li>
+    <a [routerLink]="['Dashboard']"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span></span></a>
+  </li>
+  <li>
+    <a [routerLink]="['Dashboard']"><i class="fa fa-table fa-fw"></i> Tables</a>
+  </li>
+  <li>
+    <a [routerLink]="['Dashboard']"><i class="fa fa-edit fa-fw"></i> Forms</a>
+  </li>
+  <accordion-group>
+    <div accordion-heading>
+      <a href=""><i class='fa fa-wrench fa-fw'></i> UI Elements<span class='fa arrow'></span></a>
+    </div>
+    <ul class="nav nav-second-level">
+      <li>
+        <a [routerLink]="['Dashboard']">Panels and Wells</a>
+      </li>
+      <li>
+        <a [routerLink]="['Dashboard']">Buttons</a>
+      </li>
+      <li>
+        <a [routerLink]="['Dashboard']">Notifications</a>
+      </li>
+      <li>
+        <a [routerLink]="['Dashboard']">Typography</a>
+      </li>
+      <li>
+        <a [routerLink]="['Dashboard']"> Icons</a>
+      </li>
+      <li>
+        <a [routerLink]="['Dashboard']">Grid</a>
+      </li>
+    </ul>
+    <!-- /.nav-second-level -->
+  </accordion-group>
+  <accordion-group>
+    <div accordion-heading><a href=""><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown
+      <span class="fa arrow"></span></a>
+    </div>
+    <ul class="nav nav-second-level">
+      <li>
+        <a href="">Second Level Item</a>
+      </li>
+      <li>
+        <a href="">Second Level Item</a>
+      </li>
+      <accordion-group>
+        <div accordion-heading><a href="">Third Level <span class="fa arrow"></span></a></div>
+        <ul class="nav nav-third-level">
+          <li>
+            <a href="">Third Level Item</a>
+          </li>
+          <li>
+            <a href="">Third Level Item</a>
+          </li>
+          <li>
+            <a href="">Third Level Item</a>
+          </li>
+          <li>
+            <a href="">Third Level Item</a>
+          </li>
+
+        </ul>
+        <!-- /.nav-third-level -->
+      </accordion-group>
+    </ul>
+    <!-- /.nav-second-level -->
+  </accordion-group>
+  <accordion-group>
+    <div accordion-heading>
+      <a href=""><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+    </div>
+    <ul class="nav nav-second-level">
+      <li>
+        <a [routerLink]="['Dashboard']">Blank Page</a>
+      </li>
+      <li>
+        <a [routerLink]="['Dashboard']">Login Page</a>
+      </li>
+    </ul>
+    <!-- /.nav-second-level -->
+  </accordion-group>
+  <li><a href="http://www.strapui.com/">Premium Angular Themes</a></li>
+</accordion>
+    </div>
+    <!-- /.sidebar-collapse -->
+  </div>
+</nav>

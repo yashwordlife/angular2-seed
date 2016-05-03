@@ -35,7 +35,7 @@ export class Sidebar {
 @Component({
   selector: 'header',
   templateUrl: 'app/components/header/header.html',
-  directives: [Sidebar, HeaderNotification]
+  directives: [Sidebar, HeaderNotification, ROUTER_DIRECTIVES, SidebarSearch, Dropdown, DropdownMenu, DropdownToggle, ACCORDION_DIRECTIVES]
 })
 export class Header {
 
@@ -49,7 +49,7 @@ export class Header {
         <ng-content></ng-content>
       </div>
     </div>`,
-  directives: [Header, CORE_DIRECTIVES]
+  directives: [Header, CORE_DIRECTIVES, ROUTER_DIRECTIVES, SidebarSearch, ACCORDION_DIRECTIVES ]
 })
 export class WrapperCmp {
 }

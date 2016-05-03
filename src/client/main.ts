@@ -1,11 +1,12 @@
 import {provide, enableProdMode} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
+import {HTTP_PROVIDERS} from 'angular2/http';
 import {ROUTER_PROVIDERS, APP_BASE_HREF} from 'angular2/router';
-import {App} from './app/components/app/app';
+import {AppRouter} from './AppRoot/approuter';
 
 if ('<%= ENV %>' === 'prod') { enableProdMode(); }
 
-bootstrap(App, [
+bootstrap(AppRouter, [
   ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' })
+  HTTP_PROVIDERS
 ]);
