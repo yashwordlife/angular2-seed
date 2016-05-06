@@ -4,6 +4,7 @@ import {DashboardService} from './dashboard.service'
 import {PillComponent} from '../../../shared/components/pill/pill.component';
 import {GridComponent} from '../../../shared/components/grid/grid.component';
 import {Column} from '../../../shared/components/grid/Column';
+import { Observable }     from 'rxjs/Observable';
 
 @Component({
   selector: 'dashboard',
@@ -13,7 +14,7 @@ import {Column} from '../../../shared/components/grid/Column';
 })
 export class DashboardComponent {
 	
-	private jobs : any;
+	private jobs : Observable<any>;
 	private taxReports : any;
 	private columns : any;
 	constructor( private _dashboardService : DashboardService) {
@@ -33,6 +34,6 @@ export class DashboardComponent {
 	this.columns.push(new Column('eld','ELD'));
 	}
 	ngOnInit() {
-		this.jobs = this._dashboardService.getJobs().join(' ');
+		this.jobs = this._dashboardService.getHeroes();
 	}
 }

@@ -8,7 +8,6 @@ import {HTTP_PROVIDERS} from 'angular2/http';
 import {DashboardComponent} from '../dashboard/dashboard.component'
 import {HeaderComponent} from '../../../shared/components/header/header.component'
 import {NavbarComponent} from '../navbar/navbar.component'
-import {StatsComponent} from '../../../shared/components/stats/stats.component'
 
 @Component({
   selector: 'app',
@@ -17,7 +16,7 @@ import {StatsComponent} from '../../../shared/components/stats/stats.component'
           <router-outlet></router-outlet>
         </div>  
   `,
-  directives: [ROUTER_DIRECTIVES, HeaderComponent, NavbarComponent, StatsComponent]
+  directives: [ROUTER_DIRECTIVES, HeaderComponent, NavbarComponent]
 })
 @RouteConfig([
   { path: '/', component: DashboardComponent, name: 'Dashboard', useAsDefault : true},

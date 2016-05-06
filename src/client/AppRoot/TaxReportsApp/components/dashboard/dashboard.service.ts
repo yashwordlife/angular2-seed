@@ -1,12 +1,19 @@
 // Imports
 import {Injectable} from 'angular2/core';
+import {HttpService} from '../../../shared/services/http.service'
+import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
 export class DashboardService {
-  getJobs() {
-  	var jobs = new Array<any>();
-    jobs.push("Job 1");
-    jobs.push("Job 2");
-    return jobs;
+  private heroes : Observable<any>;
+  constructor(private _httpService : HttpService) {
+    
+  }
+  getHeroes() : Observable<any> {
+    this._httpService.getHeroes()
+                     .subscribe(
+                       heroes => console.log(heroes),
+                       error =>  console.log(error));
+    return this.heroes;
   }
 }
